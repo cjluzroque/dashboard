@@ -29,6 +29,37 @@ svg {
     align-items: center;
 }
 
+.first-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+.my-user {
+    display: flex;
+    align-items: center;
+}
+
+.second-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    grid-area: buttons;
+}
+
 .main-layout {
     grid-area: main-layout;
     display: grid;
@@ -55,4 +86,9 @@ svg {
 
 .trending {
     grid-area: trending;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
 }
