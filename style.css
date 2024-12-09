@@ -18,6 +18,12 @@ svg {
     grid-template-columns: 200px 1fr;
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .nav-link, .setting-link {
     display: flex;
     align-items: center;
@@ -28,6 +34,7 @@ svg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 8px;
     grid-template-areas: 
         "projects projects announcements"
         "projects projects trending"
