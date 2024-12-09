@@ -22,3 +22,12 @@ svg {
     display: flex;
     align-items: center;
 }
+
+.main-layout {
+    display: grid;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
