@@ -24,10 +24,28 @@ svg {
 }
 
 .main-layout {
+    grid-area: main-layout;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "projects projects announcements"
+        "projects projects trending"
 }
 
 .projects {
+    grid-area: projects;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    align-content: space-between;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
