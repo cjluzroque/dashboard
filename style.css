@@ -177,9 +177,12 @@ button {
 
 .title {
     margin-bottom: 0.5em;
-    margin-left: 0.2em;
     font-size: larger;
     font-weight: bold;
+}
+
+.projects>.title, .announcements>.title, .trending>.title {
+    margin-left: 0.2em;
 }
 
 .trend {
