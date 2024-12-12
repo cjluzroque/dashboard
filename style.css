@@ -1,6 +1,6 @@
 :root {
-    --lightblue: darkcyan;
-    --gray: gray;
+    --lightblue: #1d4ed8;
+    --gray: #bfdbfe;
     --darkerwhite: white;
 }
 
@@ -15,15 +15,29 @@ svg {
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+    grid-template-areas: 
+        "sidebar main-area";
 }
 
 .sidebar {
+    grid-area: sidebar;
     display: flex;
     flex-direction: column;
     gap: 50px;
     background-color: var(--lightblue);
-    height: 100vh;
+}
+
+.main-area {
+    display: grid;
+    grid-area: main-area;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 120px auto;
+    grid-template-areas: 
+        "first-area"
+        "second-area"
+        "main-layout";
 }
 
 .nav-link, .setting-link {
@@ -32,6 +46,7 @@ svg {
 }
 
 .first-area {
+    grid-area: first-area;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +63,7 @@ svg {
 }
 
 .second-area {
+    grid-area: second-area;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,8 +83,9 @@ svg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 8px;
+    gap: 15px;
     background-color: var(--gray);
+    padding: 1em;
     grid-template-areas: 
         "projects projects announcements"
         "projects projects trending"
@@ -92,6 +109,9 @@ svg {
     flex-direction: column;
     border: 1px solid black;
     justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #94a3b8;
+    padding: 1em;
 }
 
 .actions {
