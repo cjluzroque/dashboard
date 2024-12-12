@@ -142,6 +142,10 @@ button {
     justify-content:stretch;
 }
 
+.card>.title {
+    color: var(--darkcolor);
+}
+
 .actions {
     align-self: end;
     margin-top: auto;
@@ -163,6 +167,7 @@ button {
 
 .announcement div {
     font-size: 1.2em;
+    color: var(--darkcolor);
 }
 
 .trending {
