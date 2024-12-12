@@ -38,7 +38,12 @@ svg {
     flex-direction: column;
     gap: 50px;
     background-color: var(--darkcolor);
-    color: var(--gray);
+    color: var(--lightcolor);
+    padding: 0 1em;
+}
+
+.logo {
+    font-size: 2em;
 }
 
 .main-area {
@@ -55,6 +60,7 @@ svg {
 .nav-link, .setting-link {
     display: flex;
     align-items: center;
+    gap: 0.5em;
 }
 
 .first-area {
@@ -132,13 +138,13 @@ button {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-left: 5px solid #ea580c;
+    justify-content:stretch;
 }
 
 .actions {
     align-self: end;
-    justify-self: end;
+    margin-top: auto;
 }
 
 .card svg {
@@ -149,8 +155,24 @@ button {
     grid-area: announcements;
 }
 
+.announcement {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.announcement div {
+    font-size: 1.2em;
+}
+
 .trending {
     grid-area: trending;
+}
+
+.title {
+    margin-bottom: 0.5em;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .trend {
@@ -162,7 +184,7 @@ button {
     background-color: var(--lightcolor);
     border-radius: 10px;
     box-shadow: 5px 3px 10px #94a3b8;
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .user {
