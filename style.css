@@ -1,7 +1,8 @@
 :root {
-    --lightblue: #1d4ed8;
-    --gray: #bfdbfe;
-    --darkerwhite: white;
+    --darkcolor: #3b82f6;
+    --color: #dbeafe;
+    --lightcolor: #eff6ff;
+    font-size: 1.2em;
 }
 
 * {
@@ -11,6 +12,10 @@
 
 svg {
     height: 50px;
+}
+
+.sidebar svg {
+    fill: var(--lightcolor);
 }
 
 .container {
@@ -26,7 +31,8 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color: var(--lightblue);
+    background-color: var(--darkcolor);
+    color: var(--gray);
 }
 
 .main-area {
@@ -78,13 +84,26 @@ svg {
     grid-area: buttons;
 }
 
+button {
+    background-color: var(--darkcolor);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
 .main-layout {
     grid-area: main-layout;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
-    background-color: var(--gray);
+    background-color: var(--color);
     padding: 1em;
     grid-template-areas: 
         "projects projects announcements"
