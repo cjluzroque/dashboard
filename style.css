@@ -177,6 +177,7 @@ button {
 
 .title {
     margin-bottom: 0.5em;
+    margin-left: 0.2em;
     font-size: larger;
     font-weight: bold;
 }
