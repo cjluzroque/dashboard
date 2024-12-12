@@ -168,6 +168,7 @@ button {
 .announcement div {
     font-size: 1.2em;
     color: var(--darkcolor);
+    margin-bottom: 0.4em;
 }
 
 .trending {
