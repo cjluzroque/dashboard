@@ -159,6 +159,10 @@ button {
     color: var(--darkcolor);
 }
 
+.description {
+    margin-bottom: 1em;
+}
+
 .actions {
     align-self: end;
     margin-top: auto;
