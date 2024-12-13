@@ -137,14 +137,14 @@ button {
 .main-layout {
     grid-area: main-layout;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2em;
     padding: 2em;
     background-color: var(--color);
     grid-template-areas: 
-        "projects projects announcements"
-        "projects projects trending"
+        "projects announcements"
+        "projects trending"
 }
 
 .projects {
@@ -210,7 +210,6 @@ button {
     border-bottom: 1px solid black;
     padding: 0 1em 1em 1em;
     margin-bottom: 1em;
-
 }
 
 .announcement:last-of-type {
@@ -221,6 +220,14 @@ button {
 .announcement div {
     font-size: 1.2em;
     color: var(--darkcolor);
+    transition: color 120ms linear;
+    margin-bottom: 0.4em;
+}
+
+.announcement:hover div {
+    font-size: 1.2em;
+    color: var(--orange);
+    transition: color 120ms linear;
     margin-bottom: 0.4em;
 }
 
