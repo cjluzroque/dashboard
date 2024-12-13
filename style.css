@@ -182,6 +182,10 @@ button {
     margin-bottom: 1em;
 }
 
+.announcement:last-of-type {
+    border-bottom: none;
+}
+
 .announcement div {
     font-size: 1.2em;
     color: var(--darkcolor);
