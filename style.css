@@ -240,28 +240,19 @@ button {
     align-items: center;
     gap: 0.6em;
     padding: 0.5em;
-    margin: 0.2em;
+    margin-bottom: 0.2em;
     border-radius: 15px;
-    transition: background-color 120ms linear;
-    transition: box-shadow 120ms linear;
 }
 
 .trend:last-of-type {
     margin-bottom: 0;
 }
 
-.trend:hover {
-    background-color: var(--hover);
-    box-shadow: 3px 2px 5px #94a3b8;
-    transition: background-color 120ms linear;
-    transition: box-shadow 120ms linear;
-}
-
 .trend:hover .user, .trend:hover svg {
     color: var(--orange);
     transition: color 120ms;
     fill: var(--orange);
-    transition: fill 120ms;
+    transition: fill 50ms;
 }
 
 .title {
