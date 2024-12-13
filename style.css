@@ -68,6 +68,9 @@ svg {
     color: var(--hover);
     transform-origin: center center;
     transform: scale(1.04);
+    transition: fill 100ms linear;
+    transition: transform 100ms linear;
+    transition: color 100ms linear;
 }
 
 .first-area {
@@ -153,6 +156,8 @@ button {
     background-color: var(--hover);
     transform-origin: center center;
     transform: scale(1.02);
+    transition: background-color 100ms linear;
+    transition: transform 100ms linear;
 }
 
 .card>.title {
@@ -194,6 +199,23 @@ button {
 
 .trending {
     grid-area: trending;
+}
+
+.trend {
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+}
+
+.trend:last-of-type {
+    margin-bottom: 0;
+}
+
+.trend:hover {
+    background-color: var(--hover);
+    border-radius: 15px;
+    box-shadow: 5px 3px 10px #94a3b8;
+    transition: background-color 100ms linear;
+    transition: box-shadow 100ms linear;
 }
 
 .title {
