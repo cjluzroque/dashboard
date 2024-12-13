@@ -22,6 +22,21 @@ svg {
     height: 50px;
 }
 
+.trend>svg {
+    fill: black;
+    transition: fill 120ms;
+}
+
+.nav-link>svg, .setting-link>svg {
+    fill: var(--lightcolor);
+    transition: fill 120ms;
+}
+
+.nav-link:hover svg, .setting-link:hover svg, .trend:hover svg {
+    fill: var(--orange);
+    transition: fill 120ms;
+}
+
 
 .container {
     display: grid;
@@ -61,17 +76,15 @@ svg {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
-    fill: var(--lightcolor);
+    transition: color 120ms;
 }
 
 .nav-link:hover, .setting-link:hover {
-    fill: var(--hover);
     color: var(--hover);
-    transform-origin: center center;
+    transition: color 120ms linear;
+    transform-origin: left center;
     transform: scale(1.04);
-    transition: fill 100ms linear;
-    transition: transform 100ms linear;
-    transition: color 100ms linear;
+    transition: transform 120ms linear;
 }
 
 .first-area {
@@ -139,7 +152,7 @@ button {
     flex-direction: column;
 }
 
-.projects .layout {
+.projects>.layout {
     display: grid;
     grid-template-rows: repeat(auto-fill, 1fr);
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -149,20 +162,30 @@ button {
 .card {
     display: flex;
     flex-direction: column;
-    border-left: 5px solid var(--orange);
+    border-left: 5px solid var(--darkcolor);
     justify-content:stretch;
+    background-color: var(--lightcolor);
+    transition: background-color 120ms linear;
+    transition: transform 120ms linear;
 }
 
 .card:hover {
     background-color: var(--hover);
+    border-left: 5px solid var(--orange);
     transform-origin: center center;
     transform: scale(1.02);
-    transition: background-color 100ms linear;
-    transition: transform 100ms linear;
+    transition: background-color 120ms linear;
+    transition: transform 120ms linear;
 }
 
 .card>.title {
     color: var(--darkcolor);
+    transition: color 120ms;
+}
+
+.card:hover>.title {
+    color: var(--orange);
+    transition: color 120ms;
 }
 
 .description {
@@ -184,11 +207,13 @@ button {
 
 .announcement {
     border-bottom: 1px solid black;
-    padding-bottom: 1em;
+    padding: 0 1em 1em 1em;
     margin-bottom: 1em;
+
 }
 
 .announcement:last-of-type {
+    padding: 0 1em;
     border-bottom: none;
 }
 
@@ -203,8 +228,14 @@ button {
 }
 
 .trend {
-    margin-bottom: 0.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
     padding: 0.5em;
+    margin: 0.2em;
+    border-radius: 15px;
+    transition: background-color 120ms linear;
+    transition: box-shadow 120ms linear;
 }
 
 .trend:last-of-type {
@@ -213,10 +244,14 @@ button {
 
 .trend:hover {
     background-color: var(--hover);
-    border-radius: 15px;
-    box-shadow: 5px 3px 10px #94a3b8;
-    transition: background-color 100ms linear;
-    transition: box-shadow 100ms linear;
+    box-shadow: 3px 2px 5px #94a3b8;
+    transition: background-color 120ms linear;
+    transition: box-shadow 120ms linear;
+}
+
+.trend:hover .user {
+    color: var(--orange);
+    transition: color 120ms;
 }
 
 .title {
@@ -229,20 +264,15 @@ button {
     margin-left: 0.2em;
 }
 
-.trend {
-    display: flex;
-    align-items: center;
-    gap: 0.6em;
-}
-
-.card, .announcements .layout, .trending .layout {
+.card, .announcements>.layout, .trending>.layout {
     background-color: var(--lightcolor);
     border-radius: 10px;
     box-shadow: 5px 3px 10px #94a3b8;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .user {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--darkcolor);
+    transition: color 120ms;
 }
