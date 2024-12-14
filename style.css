@@ -151,7 +151,7 @@ span {
     transition: border 100ms;
 }
 
-span:focus, span:hover {
+span:focus, .searchbar:hover>span {
     transform-origin: left center;
     transform: scale(1.1);
     transition: transform 1000ms;
