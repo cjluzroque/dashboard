@@ -333,6 +333,11 @@ button:hover {
     border-radius: 15px;
 }
 
+.trend > svg {
+    justify-items: start;
+    flex-shrink: 0;
+}
+
 .trend:last-of-type {
     margin-bottom: 0;
 }
