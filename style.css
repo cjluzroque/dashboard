@@ -65,10 +65,9 @@ svg {
     display: grid;
     grid-area: main-area;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px 120px auto;
+    grid-template-rows: 1fr auto;
     grid-template-areas: 
-        "first-area"
-        "second-area"
+        "top-area"
         "main-layout";
 }
 
@@ -88,8 +87,15 @@ svg {
     transition: transform 120ms linear;
 }
 
+.top-area {
+    grid-area: top-area;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    gap: 1em;
+}
+
 .first-area {
-    grid-area: first-area;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,37 +112,53 @@ svg {
 }
 
 .second-area {
-    grid-area: second-area;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header {
     display: flex;
     align-items: center;
+    justify-self: flex-start;
+    gap: 15px;
+    transform-origin: left center;
+    transform: scale(1.2);
+    width: 250px;
 }
 
 .buttons {
-    grid-area: buttons;
+    margin-left: auto;
+    display: flex; 
+    gap: 0.8em;
 }
 
 button {
     background-color: var(--darkcolor);
+    font-size: 0.9em;
     border: none;
-    color: black;
-    padding: 10px 20px;
+    color: var(--lightcolor);
+    padding: 10px 2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 20px;
+    transition: background-color 50ms;
+    transform: transform 50ms;
+}
+
+button:hover {
+    background-color: var(--orange);
+    transition: background-color 50ms;
+    transform: scale(1.05);
+    transform: transform 50ms;
 }
 
 .main-layout {
     grid-area: main-layout;
     display: grid;
+    box-shadow: inset 1px 3px 5px #94a3b8;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2em;
