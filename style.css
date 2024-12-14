@@ -85,6 +85,7 @@ svg {
     transform-origin: left center;
     transform: scale(1.04);
     transition: transform 120ms linear;
+    cursor: pointer;
 }
 
 .top-area {
@@ -107,21 +108,20 @@ svg {
     margin-right: auto;
 }
 
-.searchbar>svg {
+.searchbar>svg, .actions>svg {
     fill: black;
     transition: fill 100ms;
     transform-origin: center center;
     transition: transform 100ms;
-    
 }
 
-.searchbar:hover>svg {
+.searchbar:hover>svg, .actions>svg:hover{
     fill: var(--orange);
     transition: fill 100ms;
     transform-origin: center center;
     transform: scale(1.1);
     transition: transform 100ms;
-    
+    cursor: pointer;
 }
 
 span {
@@ -140,7 +140,7 @@ span {
     transition: border 100ms;
 }
 
-span:focus {
+span:focus, span:hover {
     transform-origin: left center;
     transform: scale(1.1);
     transition: transform 1000ms;
@@ -317,6 +317,7 @@ button:hover {
     color: var(--orange);
     transition: color 120ms linear;
     margin-bottom: 0.4em;
+    cursor: pointer;
 }
 
 .trending {
@@ -341,6 +342,13 @@ button:hover {
     transition: color 120ms;
     fill: var(--orange);
     transition: fill 50ms;
+    transition: transform 100ms;
+    cursor: pointer;
+}
+
+.trend:hover svg {
+    transform: scale(1.1);
+    transition: transform 100ms;
 }
 
 .title {
