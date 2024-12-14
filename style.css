@@ -25,14 +25,17 @@ svg {
 
 .trend>svg {
     fill: black;
+    transition: fill 120ms;
 }
 
 .nav-link>svg, .setting-link>svg {
     fill: var(--lightcolor);
+    transition: fill 120ms;
 }
 
 .nav-link:hover svg, .setting-link:hover svg {
     fill: var(--lighterorange);
+    transition: fill 120ms;
 }
 
 
@@ -107,10 +110,17 @@ svg {
 
 .searchbar>svg, .actions>svg {
     fill: black;
+    transition: fill 100ms;
+    transform-origin: center center;
+    transition: transform 100ms;
 }
 
 .searchbar:hover>svg, .actions>svg:hover{
     fill: var(--orange);
+    transition: fill 100ms;
+    transform-origin: center center;
+    transform: scale(1.1);
+    transition: transform 100ms;
     cursor: pointer;
 }
 
@@ -126,13 +136,18 @@ span {
     transform: scale(1);
     transition: transform 1000ms;
     background-color: var(--color);
+    transition: background-color 100ms;
+    transition: border 100ms;
 }
 
 span:focus, span:hover {
     transform-origin: left center;
+    transform: scale(1.1);
     transition: transform 1000ms;
     background-color: var(--hover);
+    transition: background-color 50ms;
     border: 2px solid var(--orange);
+    transition: border 50ms;
     width: max-content;
     min-width: 200px;
     max-width: 400px;
@@ -151,10 +166,15 @@ span:focus-visible {
 
 .notification {
     fill: black;
+    transition: fill 100ms;
+    transition: transform 100ms;
 }
 
 .notification:hover {
     fill: var(--orange);
+    transition: fill 100ms;
+    transform: scale(1.1);
+    transition: transform 100ms;
 }
 
 .second-area {
@@ -190,11 +210,15 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 20px;
+    transition: background-color 50ms;
+    transform: transform 50ms;
 }
 
 button:hover {
     background-color: var(--orange);
+    transition: background-color 50ms;
     transform: scale(1.05);
+    transform: transform 50ms;
 }
 
 .main-layout {
@@ -229,6 +253,7 @@ button:hover {
     flex-direction: column;
     border-left: 5px solid var(--darkcolor);
     justify-content:stretch;
+    background-color: var(--lightcolor);
     transition: background-color 120ms linear;
     transition: transform 120ms linear;
 }
@@ -236,6 +261,7 @@ button:hover {
 .card:hover {
     background-color: var(--hover);
     border-left: 5px solid var(--orange);
+    transform-origin: center center;
     transform: scale(1.02);
     transition: background-color 120ms linear;
     transition: transform 120ms linear;
@@ -320,7 +346,14 @@ button:hover {
     color: var(--orange);
     transition: color 120ms;
     fill: var(--orange);
+    transition: fill 50ms;
+    transition: transform 100ms;
     cursor: pointer;
+}
+
+.trend:hover svg {
+    transform: scale(1.1);
+    transition: transform 100ms;
 }
 
 .title {
@@ -333,27 +366,6 @@ button:hover {
     margin-left: 0.2em;
 }
 
-.user {
-    font-weight: bold;
-    color: var(--darkcolor);
-    transition: color 120ms;
-}
-
-.nav-link>svg, .setting-link>svg, .trend>svg {
-    transition: fill 120ms;
-}
-
-.searchbar>svg, .actions>svg, .notification {
-    transition: all 100ms; 
-}
-
-.nav-link:hover, .setting-link:hover, .searchbar:hover>svg, 
-.actions>svg:hover, .notification:hover, .trend:hover svg {
-    transform-origin: center center;
-    transform: scale(1.1);
-    transition: all 100ms;
-}
-
 .card, .announcements>.layout, .trending>.layout {
     background-color: var(--lightcolor);
     border-radius: 10px;
@@ -361,10 +373,8 @@ button:hover {
     padding: 1em;
 }
 
-span {
-    transition: all 100ms;
-}
-
-button {
-    transition: all 50ms;
+.user {
+    font-weight: bold;
+    color: var(--darkcolor);
+    transition: color 120ms;
 }
